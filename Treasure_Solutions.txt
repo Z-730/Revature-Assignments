@@ -1,0 +1,38 @@
+LZ_1@DESKTOP-ME69GJ4 MINGW64 ~/LZ_Files/Revature/Revature_Training_Org/exercises/week1 (main)
+$ cd unix_exercise/
+
+LZ_1@DESKTOP-ME69GJ4 MINGW64 ~/LZ_Files/Revature/Revature_Training_Org/exercises/week1/unix_exercise (main)
+$ ls
+chest/  house/  instructions.txt
+
+LZ_1@DESKTOP-ME69GJ4 MINGW64 ~/LZ_Files/Revature/Revature_Training_Org/exercises/week1/unix_exercise (main)
+$ find . -name 'treasure*'
+./house/basement/laundry-room/treasure1
+./house/basement/storage/treasure2
+./house/floor1/bedroom2/closet/treasure7
+./house/floor2/storage/box2/treasure8
+./house/floor2/storage/box3/treasure9
+
+LZ_1@DESKTOP-ME69GJ4 MINGW64 ~/LZ_Files/Revature/Revature_Training_Org/exercises/week1/unix_exercise (main)
+$ find . -name 'trash*'
+./house/basement/laundry-room/trash1
+./house/basement/laundry-room/trash2
+./house/basement/storage/trash3
+./house/floor0/kitchen/fridge/trash4
+./house/floor0/kitchen/fridge/trash5
+./house/floor0/kitchen/pantry/trash6
+./house/floor0/living-room/bookshelf/trash7
+./house/floor1/balcony/trash10
+./house/floor1/balcony/trash11
+./house/floor1/bedroom1/closet/trash8
+./house/floor1/bedroom1/closet/trash9
+./house/floor2/storage/box1/trash12
+./house/floor2/storage/box1/trash13
+./house/floor2/storage/box1/trash14
+./house/floor2/storage/box3/trash15
+
+LZ_1@DESKTOP-ME69GJ4 MINGW64 ~/LZ_Files/Revature/Revature_Training_Org/exercises/week1/unix_exercise (main)
+$ mv ./house/basement/laundry-room/treasure1 ./house/basement/storage/treasure2 ./house/floor1/bedroom2/closet/treasure7 ./house/floor2/storage/box2/treasure8 ./house/floor2/storage/box3/treasure9 ./chest
+
+LZ_1@DESKTOP-ME69GJ4 MINGW64 ~/LZ_Files/Revature/Revature_Training_Org/exercises/week1/unix_exercise (main)
+$ rm ./house/basement/laundry-room/trash1 ./house/basement/laundry-room/trash2 ./house/basement/storage/trash3 ./house/floor0/kitchen/fridge/trash4 ./house/floor0/kitchen/fridge/trash5 ./house/floor0/kitchen/pantry/trash6 ./house/floor0/living-room/bookshelf/trash7 ./house/floor1/balcony/trash10 ./house/floor1/balcony/trash11 ./house/floor1/bedroom1/closet/trash8 ./house/floor1/bedroom1/closet/trash9 ./house/floor2/storage/box1/trash12 ./house/floor2/storage/box1/trash13 ./house/floor2/storage/box1/trash14 ./house/floor2/storage/box3/trash15
