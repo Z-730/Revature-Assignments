@@ -50,7 +50,5 @@ public class SuperHeroExampleObject {
         } else{
             System.out.println("Not the same characters.");
         }
-
-
     }
 }
