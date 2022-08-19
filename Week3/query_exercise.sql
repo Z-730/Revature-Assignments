@@ -58,13 +58,7 @@ insert into table4 values(3, 57);
 insert into table4 values(4, 24);
 insert into table4 values(5, 47);
 
-select
-	case
-		when value % 2 = 0 then 'even'
-		when value % 2 = 1 then 'odd'
-	end as even_odd
-from
-	table4;
+select case when value % 2 = 0 then 'even' when value % 2 = 1 then 'odd' end as even_odd from table4;
 
 
 -- 5: Group by age
