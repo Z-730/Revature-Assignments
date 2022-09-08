@@ -15,7 +15,7 @@ body {
     }
 
 h1,h2,h3 {
-    color: rgb(255, 255, 255);
+    color: rgb(50, 41, 47);
     margin: 0px;
     
 }
@@ -27,9 +27,7 @@ input {
     
 
 p,ol,ul,form,table {
-    color: rgb(211, 205, 215);
-    
-
+    color: rgb(36, 32, 56);
 }
 
 table, th, td {
