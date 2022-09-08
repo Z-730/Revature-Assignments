@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(39, 169, 172);
+    font-family: var(--main-font-family);
+	font-size: var(--main-font-size);
+	font-feature-settings: "palt";
+	font-weight: normal;
+	letter-spacing: 0.03cm;
+	line-height: 1.8;
+	word-wrap: break-word;
+    --common-min-width: 100%;
+	--common-min-height: auto;
+	--main-font-size: 16px;	
+    --common-in-width: 100%;
+    --header-width: 100%;
+    }
+
+h1,h2,h3 {
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    
+}
+
+input {
+    background-color : rgb(206, 208, 151);
+    color : rgb(76, 26, 87);
+    }
+    
+
+p,ol,ul,form,table {
+    color: rgb(211, 205, 215);
+    
+
+}
+
+table, th, td {
+    border: 1px solid;
+    text-align: center;
+}
+
