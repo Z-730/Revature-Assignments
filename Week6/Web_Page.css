@@ -28,12 +28,9 @@ input {
 
 p,ol,ul,form,table {
     color: rgb(36, 32, 56);
-    
-
 }
 
 table, th, td {
     border: 1px solid;
     text-align: center;
 }
-
