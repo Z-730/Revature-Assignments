@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn'>Get Data</button>
+    <div id = 'result'></div>
+
+    <script>
+
+        // set up event listener for the button
+        let button = document.getElementById('btn');
+        button.addEventListener('click', sendRequest);
+
+        function sendRequest(){
+            //const base_url = 'https://digimon-api.vercel.app/api/digimon';
+            const base_url = 'https://swapi.dev/api';
+
+            let request = new XMLHttpRequest();
+
+            // open our connection:
+            //request.open('GET', `${base_url}`, true);
+            request.open('GET', `${base_url}/planets`, true);
+
+            request.onreadystatechange = function(){
+                // status is status code that we return from the request
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+
+                    // parse out the response
+                    console.log(typeof this.responseText);
+
+                    // convert the response from string to JS Object
+                    var parsedResponse = JSON.parse(this.responseText);
+                    console.log(parsedResponse);
+                    console.log(typeof parsedResponse);
+
+                    // get the planets from the response
+                    var planets = parsedResponse.results;
+
+                    console.log(planets);
+
+                    let htmlText = '';
+                    // iterate through the planets and construct HTML code
+                    for(const planet of planets){
+                        htmlText += `<h1>${planet.name}<h1>`;
+                        htmlText += `<h2>Rotation Period: ${planet.rotation_period}<h2>`;
+                        htmlText += `<h2>Orbital Period: ${planet.orbital_period}<h2>`;           
+                    }
+                    // console.log(htmlText);
+                    document.getElementById('result').innerHTML = htmlText;
+
+                }
+            }
+
+            request.send();
+
+        }
+    </script>
+    
+</body>
+</html>

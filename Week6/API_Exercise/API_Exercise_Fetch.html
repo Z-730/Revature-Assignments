@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn'>Get Data</button>
+    <div id = 'result'></div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', getData);
+
+        function getData(){
+            const base_url = 'https://swapi.dev/api';
+            // using the fetch api
+            fetch(`${base_url}/starships`)
+            // convert the response to JSON
+            .then(response => response.json())
+            .then(data => {
+                var ships = data.results;
+
+                let htmlText = '';
+                    // iterate through the ships and construct HTML code
+                    for(const ship of ships){
+                        htmlText += `<h1>${ship.name}<h1>`;
+                        htmlText += `<h2>Model: ${ship.model}<h2>`;
+                        htmlText += `<h2>Manufacturer: ${ship.manufacturer}<h2>`;           
+                    }
+                    // console.log(htmlText);
+                    document.getElementById('result').innerHTML = htmlText;
+            })
+            .catch(error => {
+                document.getElementById('result').innerHTML = `<h1>Something went wrong</h1>`
+
+                var p = document.createElement('p');
+                p.innerText = `<p>${error}</p>`
+
+                document.getElementById('result').appendChild(p);
+            });
+        }
+    </script>
+
+    
+</body>
+</html>
