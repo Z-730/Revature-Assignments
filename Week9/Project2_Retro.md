@@ -8,7 +8,7 @@
 - Successfully host our project on AWS. 
 
 4. What would you do differently if you could start the project over?
-- Worked on the mapppings beforehand. Just after deciding what entities and relaitonships we will be needing for the project.
+- Worked on the user request mapppings earlier.
 
 5. What do you wish you knew at the start of the project (either about the development process or the technologies used)?
 - Angular and Typescript.
